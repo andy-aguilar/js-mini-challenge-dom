@@ -26,7 +26,7 @@ Figure out what you need to change to give Javascript access to the `h1#header` 
 
 **YOUR NOTES**
 ```
-
+JS was loading before the HTML, so there wasn't an h1 w/ id=header yet. Fixed it by wrapping everything in a DOMContentLoaded event listener
 ```
 
 ## Deliverable 2
@@ -35,6 +35,7 @@ Now that you have access to the `h1#header` element, use Javascript to change th
 
 **YOUR NOTES**
 ```
+call .style.color = "red" on header variable, still have to do it inside the DOMContentLoaded listener
 
 ```
 
@@ -57,6 +58,17 @@ Create a DOM element that looks like this for each player and append it to the `
 
 **YOUR NOTES**
 ```
+First create a for loop for the PLAYERS array.
+Create a div using createElement
+use .className to set class
+  https://www.w3schools.com/jsref/prop_html_classname.asp
+use .dataset.number to set data-number 
+  https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes
+use innerHTML to format the <h3> using string interpolation and calling on the keys of the player object
+Setting parent element by using query Selector to find class .player-container
+append created div to parent div
+run formatPlayers function on PLAYERS array
+
 
 ```
 
@@ -68,5 +80,7 @@ Hint: You can use `querySelector` with [CSS Attribute Selectors](https://develop
 
 **YOUR NOTES**
 ```
+used that link, to set rival then ran rival.remove()
 
+later, bro
 ```
